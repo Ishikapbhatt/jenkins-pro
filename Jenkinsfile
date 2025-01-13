@@ -12,6 +12,7 @@ pipeline {
         stage('Run Shell Script') {
             steps {
                 echo 'Running shell script...'
+                sh "chmod +x -R ${env.WORKSPACE}"
                 sh './script.sh'   // Runs the script.sh file
             }
         }
